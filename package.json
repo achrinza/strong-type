@@ -1,5 +1,5 @@
 {
-  "name": "strong-type",
+  "name": "@achrinza/strong-type",
   "version": "0.1.6",
   "type": "module",
   "description": "allows easy type enforcement for all JS types objects and classes. it is also extensible and provides simple to use type checks for your own custom classes and types",
@@ -7,18 +7,22 @@
   "directories": {
     "example": "example"
   },
+  "publishConfig": {
+    "access": "public",
+    "tag": "v0-latest"
+  },
   "engines": {
-    "node": ">=12.0.0"
+    "node": "12 || 13 || 14 || 15 || 16 || 17"
   },
   "scripts": {
     "test": "npm run emulate && node ./test/CI.js",
     "start": "npm run emulate && node-http-server port=8000 verbose=true",
-    "emulate": "npm i && copyfiles -V \"./!(node_modules)/*\" \"./**!(node_modules)\"  \"./example/node_modules/strong-type/\" && copyfiles -V \"./node_modules/**/*\" \"./example/\" && copyfiles -V \"./!(node_modules)/*\" \"./**!(node_modules)\"  \"./test/node_modules/strong-type/\" && copyfiles -V \"./node_modules/**/*\" \"./test/\"",
+    "emulate": "copyfiles -V \"./!(node_modules)/*\" \"./**!(node_modules)\"  \"./example/node_modules/@achrinza/strong-type/\" && copyfiles -V \"./node_modules/**/*\" \"./example/\" && copyfiles -V \"./!(node_modules)/*\" \"./**!(node_modules)\"  \"./test/node_modules/@achrinza/strong-type/\" && copyfiles -V \"./node_modules/**/*\" \"./test/\"",
     "nodeExample": "node ./example/node/typecheck.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RIAEvangelist/strong-type.git"
+    "url": "git+https://github.com/achrinza/strong-type.git"
   },
   "keywords": [
     "strong",
@@ -31,13 +35,13 @@
   "author": "Brandon Nozaki Miller",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RIAEvangelist/strong-type/issues"
+    "url": "https://github.com/achrinza/strong-type/issues"
   },
-  "homepage": "https://github.com/RIAEvangelist/strong-type#readme",
+  "homepage": "https://github.com/achrinza/strong-type#readme",
   "dependencies": {},
   "devDependencies": {
-    "copyfiles": "*",
-    "node-http-server": "*",
-    "vanilla-test": "*"
+    "copyfiles": "2.4.1",
+    "node-http-server": "8.1.5",
+    "@node-ipc/vanilla-test": "1.4.9"
   }
 }

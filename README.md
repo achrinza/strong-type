@@ -1,34 +1,34 @@
-# strong-type
+# @achrinza/strong-type
 
 Type checking module for anywhere javascript can run ES6 modules. This includes node, electron and the browsers. Fully isomorphic.
 
-npm strong-type info :  [See npm trends and stats for strong-type](http://npm-stat.com/charts.html?package=strong-type&author=&from=&to=)  
-![strong-type npm version](https://img.shields.io/npm/v/strong-type.svg) ![supported node version for strong-type](https://img.shields.io/node/v/strong-type.svg) ![total npm downloads for strong-type](https://img.shields.io/npm/dt/strong-type.svg) ![monthly npm downloads for strong-type](https://img.shields.io/npm/dm/strong-type.svg) ![npm licence for strong-type](https://img.shields.io/npm/l/strong-type.svg)
+npm @achrinza/strong-type info :  [See npm trends and stats for @achrinza/strong-type](http://npm-stat.com/charts.html?package=@achrinza/strong-type&author=&from=&to=)  
+![@achrinza/strong-type npm version](https://img.shields.io/npm/v/@achrinza/strong-type.svg) ![supported node version for @achrinza/strong-type](https://img.shields.io/node/v/@achrinza/strong-type.svg) ![total npm downloads for @achrinza/strong-type](https://img.shields.io/npm/dt/@achrinza/strong-type.svg) ![monthly npm downloads for @achrinza/strong-type](https://img.shields.io/npm/dm/@achrinza/strong-type.svg) ![npm licence for @achrinza/strong-type](https://img.shields.io/npm/l/@achrinza/strong-type.svg)
 
-` npm install --save strong-type `  
+` npm install --save @achrinza/strong-type `  
 
 [![RIAEvangelist](https://avatars3.githubusercontent.com/u/369041?v=3&s=100)](https://github.com/RIAEvangelist)
 
 GitHub info :  
-[![strong-type GitHub Release](https://img.shields.io/github/release/RIAEvangelist/strong-type.svg) ![GitHub license strong-type license](https://img.shields.io/github/license/RIAEvangelist/strong-type.svg) ![open issues for strong-type on GitHub](https://img.shields.io/github/issues/RIAEvangelist/strong-type.svg)](http://riaevangelist.github.io/strong-type/)
+[![@achrinza/strong-type GitHub Release](https://img.shields.io/github/release/achrinza/strong-type.svg) ![GitHub license @achrinza/strong-type license](https://img.shields.io/github/license/achrinza/strong-type.svg) ![open issues for @achrinza/strong-type on GitHub](https://img.shields.io/github/issues/achrinza/strong-type.svg)](http://riaevangelist.github.io/@achrinza/strong-type/)
 
 
 Build Info :  
 Travis CI (linux,windows & Mac) : [![Build Status](https://travis-ci.org/RIAEvangelist/strong-test.svg?branch=main)](https://travis-ci.org/RIAEvangelist/strong-test)
 
-## What does strong-type do?
-`strong-type` allows easy type enforcement for all JS types objects and classes. It is also extensible and provides simple to use type checks for your own custom classes and types should you want to use them.
+## What does @achrinza/strong-type do?
+`@achrinza/strong-type` allows easy type enforcement for all JS types objects and classes. It is also extensible and provides simple to use type checks for your own custom classes and types should you want to use them.
 
 ## Example | strict vs. non-strict
 
-Using `strict` and `non-strict` modes. By default `strong-type` runs `strict` and will `throw` a verbose err you can handle and use if the check fails, or return true if it passes.
+Using `strict` and `non-strict` modes. By default `@achrinza/strong-type` runs `strict` and will `throw` a verbose err you can handle and use if the check fails, or return true if it passes.
 
-To use `non-strict` mode, simply pass `false` to the constructor. In this mode, `strong-type` will return `false` instead of throwing when the check fails, and will still return `true` when it passes.
+To use `non-strict` mode, simply pass `false` to the constructor. In this mode, `@achrinza/strong-type` will return `false` instead of throwing when the check fails, and will still return `true` when it passes.
 
 
 #### strict
 ```javascript 
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 //strict
 const is = new Is;
@@ -41,7 +41,7 @@ is.string(1);
 
 #### non-strict
 ```javascript
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 //non-strict
 const is = new Is(false);
@@ -53,10 +53,10 @@ is.string(1);
 
 ## Example | Basic type checking
 
-`strong-type` is intended to be very simple to use.
+`@achrinza/strong-type` is intended to be very simple to use.
 
 ```javascript 
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 //strict
 const is = new Is;
@@ -74,17 +74,17 @@ strongTypeRequired(1,'a',function(){})
 
 ```
 #### browser
-![Basic Type Checking Example Web](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/basicExampleWeb.PNG)
+![Basic Type Checking Example Web](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/basicExampleWeb.PNG)
 
 #### node
-![Basic Type Checking Example Node](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/basicExampleNode.PNG)
+![Basic Type Checking Example Node](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/basicExampleNode.PNG)
 
 ## Example | Generator type checking
 
 Generators are notoriously confusing to type check for many devs. This is why we chose to use them as an example.
 
 ```javascript 
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 //strict
 const is = new Is;
@@ -124,7 +124,7 @@ try{
 }
 
 /*
-will fail because this is STRONG-type, a 
+will fail because this is @achrinza/strong-type, a 
 generatorFunction is explicitly a GeneratorFunction,
 and not a Function
 */
@@ -148,7 +148,7 @@ is.asyncGeneratorFunction(myAsyncGenFunc);
 is.asyncGenerator(myAsyncGen);
 
 /*
-will fail becase STRONG-type 
+will fail becase @achrinza/strong-type 
 asyncGenerators and generators are explicitly different
 this is the same for generatorFunctions and functions
 */
@@ -168,15 +168,15 @@ try{
 ```
 
 #### browser
-![Generator Type Checking Example Web](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/generatorExampleWeb.PNG)
+![Generator Type Checking Example Web](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/generatorExampleWeb.PNG)
 
 #### node
-![Generator Type Checking Example Node](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/generatorExampleNode.PNG)
+![Generator Type Checking Example Node](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/generatorExampleNode.PNG)
 
 ## Date example
 
 ```javascript 
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 const is = new Is;
 
@@ -193,7 +193,7 @@ is.date(1975);
 Javascripts types are weak by nature, so the built in `isNaN()` function returns true for anything that not a number, but `is.NaN()` only returns true if it is explicitly passed `NaN`.
 
 ```js 
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 
 const is = new Is;
 
@@ -206,22 +206,22 @@ isNaN(NaN);
 isNaN(undefined);
 isNaN('a'); 
 
-//strong-type is.NaN all return false in non-strict mode,
+//@achrinza/strong-type is.NaN all return false in non-strict mode,
 //or throw in default strict mode
 is.NaN(1);
 is.NaN(undefined);
 is.NaN('a');
 
-//in strong-type only this returns true
+//in @achrinza/strong-type only this returns true
 is.NaN(NaN);
 
 ```
 
 #### browser
-![Date Type Checking Example Web](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/dateExampleWeb.PNG)
+![Date Type Checking Example Web](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/dateExampleWeb.PNG)
 
 #### node
-![Date Type Checking Example Node](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/dateExampleNode.PNG)
+![Date Type Checking Example Node](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/dateExampleNode.PNG)
 
 
 
@@ -241,7 +241,7 @@ You will see some red rows in Firefox as it does not yet support all types. The 
 
 #### Digital Ocean Static App
 
-We use the free Digital Ocean Static Apps to host a version of the local server. It is exactly the same as if you ran `npm start` on your machine. You can also use this like a CDN as it automatically rebuilds from main/master each time the branch is updated. [strong-type CDN home](https://strong-type-hiprj.ondigitalocean.app/) : https://strong-type-hiprj.ondigitalocean.app/
+We use the free Digital Ocean Static Apps to host a version of the local server. It is exactly the same as if you ran `npm start` on your machine. You can also use this like a CDN as it automatically rebuilds from main/master each time the branch is updated. [@achrinza/strong-type CDN home](https://@achrinza/strong-type-hiprj.ondigitalocean.app/) : https://@achrinza/strong-type-hiprj.ondigitalocean.app/
 
 ## Type check methods 
 
@@ -352,7 +352,7 @@ export {default:Pizza, Pizza}
 
 #### extension
 ```javascript
-import Is from 'strong-type';
+import Is from '@achrinza/strong-type';
 import Pizza from 'my-delicious-pizza';
 
 class IsMy extends Is{
@@ -379,8 +379,8 @@ is.pizza(42)
 ```
 
 #### browser
-![Pizza Type Checking Example Web](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/pizzaExampleWeb.PNG)
+![Pizza Type Checking Example Web](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/pizzaExampleWeb.PNG)
 
 #### node
-![Pizza Type Checking Example Node](https://raw.githubusercontent.com/riaevangelist/strong-type/main/docs/img/pizzaExampleNode.PNG)
+![Pizza Type Checking Example Node](https://raw.githubusercontent.com/achrinza/strong-type/main/docs/img/pizzaExampleNode.PNG)
 

@@ -1,6 +1,3 @@
-node_modules/
 example/
 test/
-travis.yml
-.gitignore
-index.html
+.github

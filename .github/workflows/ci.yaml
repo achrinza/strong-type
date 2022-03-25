@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [ v0 ]
+  pull_request:
+    branches: [ v0 ]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+        node-version:
+          # Upstream explicitly tests against EOL-ed odd-numbered versions
+          - 12
+          - 13
+          - 14
+          - 15
+          - 16
+          - 17
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install Dependencies
+      run: npm ci --ignore-scripts
+    - name: Run Tests
+      run: npm test
+  license-lint:
+    name: License Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@43bd643263f2a557a37e023e538ab9f83dce92a6 #v1.1.1
