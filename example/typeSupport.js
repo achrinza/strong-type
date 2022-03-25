@@ -1,4 +1,4 @@
-import Is from './node_modules/strong-type/index.js';
+import Is from './node_modules/@achrinza/strong-type/index.js';
 
 const is=new Is(false);
 

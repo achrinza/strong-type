@@ -1,4 +1,4 @@
-import VanillaTest from 'vanilla-test';
+import VanillaTest from '@node-ipc/vanilla-test';
 import Is from '../index.js'
 const test=new VanillaTest;
 const is=new Is;

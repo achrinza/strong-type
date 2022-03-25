@@ -1,6 +1,7 @@
 example
 coverage
 test
-docs
 .gitignore
 index.html
+/coverage
+.github

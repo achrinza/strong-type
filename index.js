@@ -47,11 +47,7 @@ class Is{
         if(value==targetValue){
             return true;
         }
-        
-        if(!this.strict){
-            return false;
-        }
-        throw new Error(`expected ${value} == ${targetValue} but it is not.`);
+        return this.throw(typeof value, typeName);
     }
 
     defined(value){
