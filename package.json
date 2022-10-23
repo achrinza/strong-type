@@ -36,9 +36,9 @@
   },
   "homepage": "https://github.com/achrinza/strong-type#readme",
   "devDependencies": {
+    "@node-ipc/vanilla-test": "1.4.12",
     "c8": "^7.6.0",
     "copyfiles": "^2.4.1",
-    "node-http-server": "8.1.5",
-    "@node-ipc/vanilla-test": "1.4.9"
+    "node-http-server": "8.1.5"
   }
 }
