@@ -27,6 +27,7 @@ jobs:
           - 18
           - 19
           - 20
+          - 21
       fail-fast: false
     steps:
     - uses: actions/checkout@v3
